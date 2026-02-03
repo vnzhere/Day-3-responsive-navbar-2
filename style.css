@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family:"Jost" , serif;
+    min-height: center;
+    background-image: url(https://img.freepik.com/free-vector/watercolor-abstract-floral-background_52683-134424.jpg?semt%3Dais_hybrid%26w%3D740%26q%3D80) no repeat center center/cover;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top:0;
+    background: transparent;
+    box-shadow: 0 10px 20px  paleturquoise;
+    backdrop-filter: blur (10px);
+    z-index: 999;
+
+}

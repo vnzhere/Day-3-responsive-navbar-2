@@ -1,40 +1,83 @@
-*{
+/* Removes default margin from entire page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo styling */
+.logo {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Navbar container */
+.navbar {
+    background-color: #333;   /* Dark background */
+    color: white;            /* Text color */
+    display: flex;           /* Align items in a row */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;     /* Vertically center */
+    padding: 10px 20px;
+}
+
+/* Hide hamburger icon on desktop */
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Navigation list */
+.nav-links {
+    list-style: none; /* Remove bullets */
+    display: flex;    /* Horizontal layout */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-
 }
 
-body{
-    font-family:"Jost" , serif;
-    min-height: center;
-    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230707/pngtree-3d-rendering-of-a-lush-wall-of-pink-rose-flowers-image_3817454.jpg) no repeat center center/cover;
+/* Each list item */
+.nav-links li {
+    margin-left: 20px;
 }
 
-.navbar{
+/* Link style */
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: yellow;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+
+    /* Show hamburger icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide menu initially */
+    .nav-links {
+        display: none;
+        flex-direction: column; /* Stack vertically */
+        width: 100%;
+        background-color: #333;
+    }
+
+    /* When active class added */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Spacing for mobile links */
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+.nav-links.active {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    width: 100%;
-    position: sticky;
-    top:0;
-    background: transparent;
-    box-shadow: 0 10px 20px  paleturquoise;
-    backdrop-filter: blur (10px);
-    z-index: 999;
-
 }
-.navbar-container { 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width:100%;
-    padding: 0 2 rem;
-    font-weight: 600;
-    color: azure;
-    text-decoration: none;
-    cursor: pointer;
-
-}
-
